@@ -1,7 +1,7 @@
 import '../models/models.dart';
 
 // ! list of stories
-List<Story> stories = [
+List<Story> storiesData = [
   Story(
     name: "james",
     storyImage:
@@ -55,7 +55,7 @@ List<Story> stories = [
 ];
 
 // ! list of posts
-List<Post> posts = [
+List<Post> postsData = [
   Post(
     userName: "john",
     caption: "Sed ut perspiciatis omor sit voluptatem",

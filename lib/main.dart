@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screen/homepage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -8,26 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("INSTAGRAM CLONE"),
-        ),
-        body: Center(
-          child: Text("Let's start coding"),
-        ),
-      ),
+      initialRoute: HomePage.routeName,
+      routes: {
+        HomePage.routeName: (context) => HomePage(),
+      },
     );
   }
 }

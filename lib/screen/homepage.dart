@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import '../components/posttile.dart';
 
 class HomePage extends StatelessWidget {
+  static const String routeName = "/";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xFFEEEEEE),
+          backgroundColor: Colors.white,
           brightness: Brightness.light,
           centerTitle: true,
           title: Text(
             "Instagram",
-            style: TextStyle(
-              color: Colors.black,
-            ),
+            style: GoogleFonts.pacifico(
+              textStyle: TextStyle(
+                color: Colors.black,
+                fontSize: 24,
+                fontWeight: FontWeight.w200,
+              )
+            )
           ),
           leading: IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.camera_alt,
+              Feather.camera,
               color: Colors.black,
             ),
           ),
@@ -27,22 +36,24 @@ class HomePage extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.tv,
+                Feather.tv,
                 color: Colors.black,
               ),
             ),
             IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.send,
+                FontAwesome.paper_plane,
                 color: Colors.black,
               ),
             ),
           ],
         ),
         body: Container(
+          padding: EdgeInsets.zero,
+          margin: EdgeInsets.zero,
           child: Center(
-            child: Text("posts are loading"),
+            child: PostTile(),
           ),
         ),
       ),
