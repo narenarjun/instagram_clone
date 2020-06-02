@@ -8,7 +8,6 @@ class PostTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double srnWidth = MediaQuery.of(context).size.width;
-    print(srnWidth);
     return Container(
       margin: EdgeInsets.zero,
       padding: EdgeInsets.zero,
